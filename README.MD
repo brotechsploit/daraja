@@ -53,16 +53,24 @@ daraja/
 │
 ├── vendor/
 │
-├── mpesaresults/
+├── callback/
 │   └── (Callback responses)
 │
 ├── .env
 │
-├── mpesa.php
+├── example/
 │
-├── composer.json
-│
-└── README.md
+│── composer.json
+│── composer.lock
+│── src/
+│   └── Daraja.php
+│── vendor/
+│   ├── autoload.php
+│   ├── composer/
+│   │   ├── autoload_psr4.php
+│   │   ├── autoload_real.php
+│   │   └── ...
+│   └── vlucas/
 ```
 
 ---
@@ -134,7 +142,7 @@ Simply update your configuration to switch environments.
 An example implementation is provided in:
 
 ```
-mpesa.php
+/example/mpesastkpush.php
 ```
 
 ---
