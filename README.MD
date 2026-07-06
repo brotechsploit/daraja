@@ -51,7 +51,6 @@ daraja/
 ├── configs/
 │   └── (Configuration files)
 │
-├── vendor/
 │
 ├── callback/
 │   └── (Callback responses)
