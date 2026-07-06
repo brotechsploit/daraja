@@ -76,18 +76,32 @@ daraja/
 
 ## Configuration
 
-Create your configuration file or update the existing one.
+edit the .env file with the valid safaricom daraja credentials 
 
 Example:
+MPESA_CONSUMER_KEY=qP50LHCHnaIJajKsOMZAxbC3v0PoGvaj4GhQa02pszLy0e00
+MPESA_CONSUMER_SECRET=i7dP8GRQJ4G6avPzM4GfUBKvAJ4pdaRUT0SajUPuEfnUhjAhSScGR4YHcIwnwPKW
+MPESA_PASSKEY=bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919
+MPESA_SHORTCODE=174379
+MPESA_CALLBACK_URL=https://example.com/callback/
+MPESA_INITIATOR_USERNAME=apiuser
+MPESA_SECURITY_CREDENTIALS=i7dP8GRQJ4G6avPzM4GfUBKvAJ4pdaRUT0SajUPuEfnUhjAhSScGR4YHcIwnwPKW
+QueueTimeOutURL=https://example.com/timeout.php
+ResultURL=https://example.com/result.php
 
-```php
+```php , match with the classconnectphp config as sampled below
 return [
-    'consumerKey' => 'YOUR_CONSUMER_KEY',
-    'consumerSecret' => 'YOUR_CONSUMER_SECRET',
-    'shortCode' => '174379',
-    'passKey' => 'YOUR_PASSKEY',
-    'callbackUrl' => 'https://yourdomain.com/callback.php',
-    'environment' => 'sandbox'
+    'consumerkey' => MPESA_CONSUMER_KEY,
+    'consumersecret' => MPESA_CONSUMER_SECRET,
+    'shortcode' => MPESA_SHORTCODE,
+    'passkey' => MPESA_PASSKEY,
+    'callbackurl' => MPESA_CALLBACK_URL,
+    'sandbox' => true, // change to false for production
+    'apiusername' => MPESA_API_USERNAME,
+    'apipassword' => MPESA_API_PASSWORD,
+    'timeouturl' => QueueTimeOutURL,
+    'resulturl' => ResultURL
+
 ];
 ```
 
@@ -100,7 +114,7 @@ return [
 
 require 'vendor/autoload.php';
 
-use YourVendor\Daraja\Daraja;
+use Brotechsploit\Daraja\Daraja;
 
 $config = require 'configs/classconnect.php';
 
@@ -121,7 +135,7 @@ print_r($response);
 ## Callback Handling
 
 Configure your callback URL inside your Safaricom Developer Portal.
-we have a sample of the callback code in the mpesaresults callback.php
+we have a sample of the callback code in the  callback/callback.php
 The callback data can then be processed and stored according to your application's requirements.
 ---
 

@@ -3,7 +3,7 @@ use Brotechsploit\Daraja\Daraja;
 $phonenumber = "254742513563";
 $amount = (float)1;
 $reference = 'VINCENT';
-$configs = require __DIR__.'/../src/mpesalink.php';
+$configs = require __DIR__.'/../configs/classconnect.php';
 
 $daraja = new Daraja($configs);
 $response = $daraja->stkPush($phonenumber,$amount,$reference);
