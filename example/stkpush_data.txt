@@ -1,0 +1,9 @@
+Array
+(
+    [MerchantRequestID] => 4d1b-42fa-82c2-0d153ea2188814855964
+    [CheckoutRequestID] => ws_CO_06072026200125677742513563
+    [ResponseCode] => 0
+    [ResponseDescription] => Success. Request accepted for processing
+    [CustomerMessage] => Success. Request accepted for processing
+)
+
