@@ -48,8 +48,6 @@ composer require brotechsploit/daraja-api
 ```
 daraja/
 │
-├── configs/
-│   └── (Configuration files)
 │
 │
 ├── callback/
@@ -89,19 +87,18 @@ MPESA_SECURITY_CREDENTIALS=i7dP8GRQJ4G6avPzM4GfUBKvAJ4pdaRUT0SajUPuEfnUhjAhSScGR
 QueueTimeOutURL=https://example.com/timeout.php
 ResultURL=https://example.com/result.php
 
-```php , match with the classconnectphp config as sampled below
-return [
-    'consumerkey' => MPESA_CONSUMER_KEY,
-    'consumersecret' => MPESA_CONSUMER_SECRET,
-    'shortcode' => MPESA_SHORTCODE,
-    'passkey' => MPESA_PASSKEY,
-    'callbackurl' => MPESA_CALLBACK_URL,
-    'sandbox' => true, // change to false for production
-    'apiusername' => MPESA_API_USERNAME,
-    'apipassword' => MPESA_API_PASSWORD,
-    'timeouturl' => QueueTimeOutURL,
-    'resulturl' => ResultURL
-
+```php , match with the  config as sampled below in mpesa stk file 
+$config = [
+    'consumerkey'    => $_ENV['MPESA_CONSUMER_KEY'],
+    'consumersecret' => $_ENV['MPESA_CONSUMER_SECRET'],
+    'shortcode'      => $_ENV['MPESA_SHORTCODE'],
+    'passkey'        => $_ENV['MPESA_PASSKEY'],
+    'callbackurl'    => $_ENV['MPESA_CALLBACK_URL'],
+    'sandbox'        => true,
+    'apiusername'    => $_ENV['MPESA_INITIATOR_USERNAME'],
+    'apipassword'    => $_ENV['MPESA_SECURITY_CREDENTIALS'],
+    'timeouturl'     => $_ENV['QueueTimeOutURL'],
+    'resulturl'      => $_ENV['ResultURL']
 ];
 ```
 

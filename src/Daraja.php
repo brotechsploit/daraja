@@ -17,9 +17,7 @@ class Daraja{
     private string $resultUrl;
     public function __construct(array $config=[])
     {
-        if(empty($config)){
-            $config = require __DIR__.'/../configs/classconnect.php';
-        }
+       
         $required = [
             'consumerkey',
             'consumersecret',
