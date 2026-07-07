@@ -3,9 +3,9 @@ use Brotechsploit\Daraja\Daraja;
 $phonenumber = "254742513563";
 $amount = (float)1;
 $reference = 'VINCENT';
-$configs = require __DIR__.'/../configs/classconnect.php';
 
-$daraja = new Daraja($configs);
+
+$daraja = new Daraja();
 $response = $daraja->stkPush($phonenumber,$amount,$reference);
 
 if(isset($response['ResponseCode']) && $response['ResponseCode'] === "0"){

@@ -2,6 +2,8 @@
 namespace Brotechsploit\Daraja;
 use Exception;
 use Error;
+use InvalidArgumentException;
+
 class Daraja{
     private string $consumerkey;
     private string $consumersecret;
@@ -13,8 +15,29 @@ class Daraja{
     private string $apipassword;
     private string $timeoutUrl;
     private string $resultUrl;
-    public function __construct(array $config)
+    public function __construct(array $config=[])
     {
+        if(empty($config)){
+            $config = require __DIR__.'/../configs/classconnect.php';
+        }
+        $required = [
+            'consumerkey',
+            'consumersecret',
+            'shortcode',
+            'passkey',
+            'callbackurl',
+            'sandbox',
+            'apiusername',
+            'apipassword',
+            'timeouturl',
+            'resulturl'
+        ];
+        foreach($required as $key){
+            if(!array_key_exists($key, $config)){
+                throw new InvalidArgumentException("Missing configuration key : {$key}");
+            }
+        }
+      
         $this->consumerkey = $config['consumerkey'];
         $this->consumersecret = $config['consumersecret'];
         $this->passkey = $config['passkey'];
