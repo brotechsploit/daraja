@@ -1,4 +1,5 @@
 <?php
+//remember to run this test copy this file to your original folder to avoid exeception errors 
 use Dotenv\Dotenv;
 use Brotechsploit\Daraja\Daraja;
 $phonenumber = "254742513563";

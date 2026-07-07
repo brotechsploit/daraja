@@ -74,7 +74,7 @@ daraja/
 
 ## Configuration
 
-edit the .env file with the valid safaricom daraja credentials 
+edit the .env file with the valid safaricom daraja credentials  and place it in the home directory folder to prevent read file errors
 
 Example:
 MPESA_CONSUMER_KEY=qP50LHCHnaIJajKsOMZAxbC3v0PoGvaj4GhQa02pszLy0e00
@@ -108,6 +108,7 @@ $config = [
 
 ```php
 <?php
+require '/vendor/autoload.php';
 use Dotenv\Dotenv;
 use Brotechsploit\Daraja\Daraja;
 $phonenumber = "254742513563";
