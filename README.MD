@@ -36,7 +36,7 @@ This package simplifies working with Daraja services such as STK Push, STK Push 
 Install the package using Composer:
 
 ```bash
-composer require vincent/daraja-api
+composer require btech/daraja
 ```
 
 
