@@ -1,4 +1,4 @@
-## brotechsploit daraja APi intergration
+## brotechsploitsdk daraja APi intergration
 ## mpesa stk push made easy , b2c , b2b 
 
 # Daraja API PHP SDK
@@ -110,7 +110,7 @@ $config = [
 <?php
 require '/vendor/autoload.php';
 use Dotenv\Dotenv;
-use Brotechsploit\Daraja\Daraja;
+use vincent\Daraja\Daraja;
 $phonenumber = "254742513563";
 $amount = (float)1;
 $reference = 'VINCENT';
