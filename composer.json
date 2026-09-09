@@ -1,16 +1,16 @@
 {
-    "name": "brotechsploit/daraja",
+    "name": "vincent/daraja",
     "type": "library",
     "description": "Safaricom Daraja API PHP SDK",
     "autoload": {
         "psr-4": {
-            "Brotechsploit\\Daraja\\": "src/"
+            "vincent\\Daraja\\": "src/"
         }
     },
      "authors": [
         {
             "name": "Vincent Oloo",
-            "email": "brotechsploit@gmail.com"
+            "email": "brotechsploit@spotlitfree.com"
         }
     ],
     "require": {

@@ -1,7 +1,7 @@
 <?php
 //remember to run this test copy this file to your original folder to avoid exeception errors 
 use Dotenv\Dotenv;
-use Brotechsploit\Daraja\Daraja;
+use vincent\Daraja\Daraja;
 $phonenumber = "254742513563";
 $amount = (float)1;
 $reference = 'VINCENT';
