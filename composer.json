@@ -1,10 +1,10 @@
 {
-    "name": "vincent/daraja",
+    "name": "btech/daraja",
     "type": "library",
     "description": "Safaricom Daraja API PHP SDK",
     "autoload": {
         "psr-4": {
-            "vincent\\Daraja\\": "src/"
+            "btech\\Daraja\\": "src/"
         }
     },
      "authors": [
