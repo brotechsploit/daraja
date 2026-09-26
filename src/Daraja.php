@@ -1,5 +1,5 @@
 <?php
-namespace btech\Daraja;
+namespace brotechsploit\Daraja;
 use Exception;
 use Error;
 use InvalidArgumentException;
