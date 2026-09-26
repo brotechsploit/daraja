@@ -36,7 +36,8 @@ This package simplifies working with Daraja services such as STK Push, STK Push 
 Install the package using Composer:
 
 ```bash
-composer require btech/daraja
+composer require brotechsploit/daraja
+
 ```
 
 
@@ -106,11 +107,10 @@ $config = [
 
 ## Basic Usage
 
-```php
 <?php
 require '/vendor/autoload.php';
 use Dotenv\Dotenv;
-use vincent\Daraja\Daraja;
+use brotechsploit\Daraja\Daraja;
 $phonenumber = "254742513563";
 $amount = (float)1;
 $reference = 'VINCENT';
@@ -142,7 +142,7 @@ if(isset($response['ResponseCode']) && $response['ResponseCode'] === "0"){
 }
 
 print_r($response);
-```
+
 
 ---
 
